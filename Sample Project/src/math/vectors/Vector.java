@@ -1,11 +1,11 @@
 package math.vectors;
 
-class Vector {
+public class Vector {
 	
 	protected static final int X = 0, Y = 1, Z = 2, W = 3;
 	
-	protected final double[] components;
-	protected final int dimension;
+	public final double[] components;
+	public final int dimension;
 	
 	public Vector(double... components) {
 		this.components = components;

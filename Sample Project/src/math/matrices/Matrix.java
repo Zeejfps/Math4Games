@@ -1,6 +1,6 @@
 package math.matrices;
 
-class Matrix {
+public class Matrix {
 
 	public final double[][] m;
 	public final int rows, cols;
