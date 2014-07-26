@@ -1,21 +1,17 @@
 package math.vectors;
 
-import java.util.Arrays;
-
 public class Vector2D extends Vector {
-
-	private final static int X = 0, Y = 1;
 	
 	public Vector2D() {
 		this(0, 0);
 	}
 	
 	public Vector2D(double x, double y) {
-		super(new double[]{x, y});
+		this(new double[]{x, y});
 	}
 	
 	public Vector2D(Vector2D copy) {
-		this(Arrays.copyOf(copy.components, copy.dimension));
+		this(copy.x(), copy.y());
 	}
 	
 	protected Vector2D(double[] components) {

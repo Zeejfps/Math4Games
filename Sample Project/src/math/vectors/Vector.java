@@ -1,8 +1,8 @@
 package math.vectors;
 
-import java.util.Arrays;
-
-public class Vector {
+class Vector {
+	
+	protected static final int X = 0, Y = 1, Z = 2, W = 3;
 	
 	protected final double[] components;
 	protected final int dimension;
@@ -10,10 +10,6 @@ public class Vector {
 	public Vector(double... components) {
 		this.components = components;
 		this.dimension = components.length;
-	}
-	
-	public Vector(Vector copy) {
-		this(Arrays.copyOf(copy.components, copy.dimension));
 	}
 	
 	public Vector add(Vector vec) {
@@ -83,7 +79,7 @@ public class Vector {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Vector ").append(dimension).append("D: [");
+		sb.append("Vector").append(dimension).append("D: [");
 		for (int i = 0; i < dimension-1; i++) {
 			sb.append(components[i]).append(", ");
 		}
