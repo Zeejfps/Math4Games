@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Vector2D v2 = new Vector2D();
+		Vector2D v2 = new Vector2D(1, 1);
 		Vector3D v3 = new Vector3D();
 		Vector4D v4 = new Vector4D();
 		

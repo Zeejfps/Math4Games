@@ -123,6 +123,7 @@ class Vector <V extends Vector<V>> {
 	public boolean equals(Object obj) {
 		
 		if (obj instanceof Vector) {
+			@SuppressWarnings("unchecked")
 			Vector<V> vec = (Vector<V>)obj;
 			if (dimension == vec.dimension) {
 				for (int i = 0; i < dimension; i++) {
@@ -135,6 +136,49 @@ class Vector <V extends Vector<V>> {
 		}
 		
 		return false;
+	}
+	
+	public static<V extends Vector<V>> V add(V v1, V v2) {
+		V result = v1.clone();
+		result.add(v2);
+		
+		return result;
+	}
+	
+	public static<V extends Vector<V>> V add(V v1, double value) {
+		V result = v1.clone();
+		result.add(value);
+		
+		return result;
+	}
+	
+	public static<V extends Vector<V>> V sub(V v1, V v2) {
+		V result = v1.clone();
+		result.sub(v2);
+		
+		return result;
+	}
+	
+	public static<V extends Vector<V>> V sub(V v1, double value) {
+		V result = v1.clone();
+		result.sub(value);
+		
+		return result;
+	}
+	
+	
+	public static<V extends Vector<V>> V mult(V v1, double value) {
+		V result = v1.clone();
+		result.mult(value);
+		
+		return result;
+	}
+	
+	public static<V extends Vector<V>> V div(V v1, double value) {
+		V result = v1.clone();
+		result.div(value);
+		
+		return result;
 	}
 	
 }
